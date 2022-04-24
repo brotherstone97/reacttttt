@@ -6,12 +6,20 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "aphrodite": "^2.4.0",
+    "babel-runtime": "^6.26.0",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "5.0.1",
+    "react-with-styles": "^5.0.0",
+    "react-with-styles-interface-aphrodite": "^6.0.1",
+    "sass": "^1.50.1",
+    "shallow-equal": "^1.2.1",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +42,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addons": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "sass-loader": "^12.6.0",
+    "storybook-addon-jsx": "^7.3.14"
   }
 }
