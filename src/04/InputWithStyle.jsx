@@ -35,13 +35,17 @@ class Input extends PureComponent {
         const {errorMessage, label, name, value, type, onFocus} = this.props;
         return (
             <div className='input-field'>
-                {label}
-                <input id={`input_${name}`} ref={this.setRef} onChange={this.handleChange} onFocus={onFocus}
-                       value={value} type={type}/>
-                <label htmlFor={`input_${name}`}>
+                <input id={`input_${name}`}
+                       className={`validate ${errorMessage && 'invalid'}`}
+                       ref={this.setRef}
+                       onChange={this.handleChange}
+                       onFocus={onFocus}
+                       value={value}
+                       type={type}/>
+                <label className='active' for={`input_${name}`}>
                     {label}
                 </label>
-                {errorMessage && <span className='error'>{errorMessage}</span>}
+                    {errorMessage && <span className='helper-text' data-error={errorMessage}>{errorMessage}</span>}
             </div>
         );
     }
